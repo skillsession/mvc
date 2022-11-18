@@ -1,6 +1,8 @@
 <nav>
     <div>amazingly menuistic: 
+        <a href="/home/restricted">restricted</a>
         <a href="/user/register">register</a>
+
         <?php if(isset($_SESSION['logged_in'])) : ?>
             <a href="/user/logout">logout</a>
             

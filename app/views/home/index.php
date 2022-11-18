@@ -6,8 +6,18 @@
      * is available here.
      */
 ?>
-<p>Parameter 1: <?=$viewbag['param_a'] ?? '' ?> </p>
-<p>Parameter 2: <?=$viewbag['param_b'] ?? '' ?> </p>
+<p>First parameter accessed directly: <?=$viewbag['passed'][0] ?? '' ?> </p>
+<p>Passed parameters looped:
+    <?php foreach ($viewbag['passed'] as $param) : ?>
+        <?=$param ?? '' ?> 
+    <?php endforeach;
+    /**
+     * Notice that a maximum of 2 parameters are printed out,
+     * because the home/index method only works with 2 parameters.
+     * All remaining parameters are ignored.
+     */
+    ?>
+</p>
 
 <pre>
     <?php 
