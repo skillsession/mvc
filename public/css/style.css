@@ -1,0 +1,40 @@
+/**
+* A simple sample CSS file that shows how to load assets
+* from the views. This is imported in app/views/partials/head.
+*/
+h1 {
+    color: red;
+}
+
+body {
+    background-color: lightgrey;
+    margin: 0;
+}
+
+.container {
+    width: 96vw;
+    max-width: 1000px;
+    background-color: white;
+    margin: 0 auto;
+    min-height: 90vh;
+    padding: 4%;
+}
+
+header, footer {
+    width: 100%;
+    background-color:black;
+    color: white;
+}
+
+nav, nav a {
+    background-color: green;
+    color: white;
+    padding: 6px; 
+}
+nav a:hover {
+    background-color: purple;
+}
+
+footer {
+    text-align: center;
+}
