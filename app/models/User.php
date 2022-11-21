@@ -10,14 +10,18 @@ class User extends Database {
 		$email = filter_var ( $_POST['email'], FILTER_SANITIZE_STRING);
 		$password = filter_var ( $_POST['password'], FILTER_SANITIZE_STRING);
 		
+		
+		
+		$result = $this->select_one ("user", "email", $email);
+/*
 		$sql = "SELECT email, password FROM user WHERE email = :email";
 		
 		$stmt = $this->conn->prepare($sql);
 		$stmt->bindParam(':email', $email);
 		$stmt->execute();
 		$result = $stmt->fetch(); //fetchAll would get multiple rows
-
-		return password_verify($_POST['password'], $password);
+*/		
+		return password_verify($password, $result['password']);
 
 	}
 

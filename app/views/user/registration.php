@@ -1,3 +1,4 @@
+<h1>Register new user</h1>
 <form method="post" action="/user/register">
     <div>    
         <label for="email">email address</label>

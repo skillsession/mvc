@@ -38,4 +38,16 @@ class Database extends DB_Config {
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 
+	/**
+	 * 
+	 */
+	protected function select_one ($table, $column, $value) {
+		$sql = "SELECT * FROM $table WHERE $column = :value";
+
+		$stmt = $this->conn->prepare($sql);
+		$stmt->bindParam(':value', $value);
+		$stmt->execute();
+		return $stmt->fetch();
+	}
+
 }

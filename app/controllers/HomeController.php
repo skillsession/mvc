@@ -15,7 +15,7 @@ class HomeController extends Controller {
 	public function index ($param_a = null, $param_b = null) {
 		
 		$viewbag['passed'] = [$param_a, $param_b];
-		$viewbag['math_result'] = $this->service('math')->add_random_number(2, 4);
+		$viewbag['math_result'] = $this->service('math')->add_random_number(2);
 		$viewbag['dog_fact'] = $this->service('dog')->get_fact();
 		$viewbag['model'] = $this->model('home')->x_string("joe");
 		
