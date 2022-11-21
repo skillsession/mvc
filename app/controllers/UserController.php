@@ -32,5 +32,10 @@ class UserController extends Controller {
         session_unset();
 		header('Location: /');	
 	}
+
+    public function all_users () {
+        $viewbag['users'] = $this->model('user')->get_users();
+        $this->view('user', 'table', $viewbag);
+    }
 	
 }
