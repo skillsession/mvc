@@ -6,7 +6,7 @@
 class DogService {
 
     public function get_fact () {
-        $URL = "https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1";
+        $URL = "https://skillsession.net/api/dogfacts/";
         $json = file_get_contents($URL);
         $object = json_decode($json);
         return $object[0]->fact;
