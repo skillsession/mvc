@@ -10,3 +10,10 @@ CREATE TABLE user (
     email VARCHAR(126) UNIQUE NOT NULL,
     password VARCHAR(126)
 );
+
+CREATE TABLE goat (
+    goat_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(126),
+    type VARCHAR(126),
+    birthday TIMESTAMP DEFAULT NOW()
+);
